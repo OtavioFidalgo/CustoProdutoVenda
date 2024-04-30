@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 3 aula 2</title>
+</head>
+<body>
+    <h1>Mercado</h1>
+    <p>Produto: <span id="produto"></span></p>
+    <p>Preço do produto: <span id="preco"></span></p>
+    <p>Taxa do produto: <span id="taxa"></span></p>
+    <p>Distribuição: <span id="distribuicao"></span></p>
+    <p>Preço Final: <span id="final"></span></p>
+
+    <script>
+        let produto;
+        let preco;
+        let taxa;
+        let distribuicao;
+        let final;
+
+        produto = prompt("Digite o nome do produto");
+        preco = Number(prompt("Digite o preço do produto"));
+        taxa = Number(prompt("Digite a taxa do produto"));
+        distribuicao = Number(prompt("Digite a taxa de distribuição do produto"));
+
+        taxa = (taxa / 100) * preco;
+        distribuicao = (distribuicao / 100) * preco;
+
+        final =(preco + taxa + distribuicao)
+
+
+        document.getElementById('produto').innerHTML = produto;
+        document.getElementById('preco').innerHTML = preco;
+        document.getElementById('taxa').innerHTML = taxa;
+        document.getElementById('distribuicao').innerHTML = distribuicao;
+        document.getElementById('final').innerHTML = final;
+
+    </script>
+    
+</body>
+</html>
